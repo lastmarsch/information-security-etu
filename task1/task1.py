@@ -1,5 +1,6 @@
-import winreg
 import csv
+import winreg
+
 
 def get_software(hive, flag):
     aReg = winreg.ConnectRegistry(None, hive)

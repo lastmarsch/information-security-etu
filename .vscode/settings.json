@@ -1,0 +1,9 @@
+{
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true, 
+		"source.organizeImports": true
+	},
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.python"
+	}
+}
