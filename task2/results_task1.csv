@@ -1,0 +1,17 @@
+Software name,Version,CPE
+Steam,2.10.91.91,cpe:2.3:a:valvesoftware:steam_client:-:*:*:*:*:*:*:*
+AMD Ryzen Master SDK,2.7.0.1851,cpe:2.3:o:amd:ryzen_master:-:*:*:*:*:*:*:*
+AMD Software,22.8.1,cpe:2.3:a:amd:radeon_software:-:*:*:*:*:*:*:*
+Apple Mobile Device Support,15.6.0.32,cpe:2.3:a:apple:apple_mobile_device_support:-:*:*:*:*:*:*:*
+Apple Software Update,2.7.0.3,cpe:2.3:a:apple:software_update:-:*:*:*:*:*:*:*
+Bonjour,3.1.0.1,cpe:2.3:a:apple:bonjour:-:-:windows:*:*:*:*:*
+iTunes,12.12.4.1,cpe:2.3:a:apple:itunes-:-:windows:*:*:*:*:*
+Google Chrome,105.0.5195.127,cpe:2.3:a:google:chrome:-:*:*:*:*:*:*:*
+Microsoft Edge,105.0.1343.42,cpe:2.3:a:microsoft:edge:-:*:*:*:*:*:*:*
+Microsoft Visual Studio Code (User),1.71.2,cpe:2.3:a:microsoft:visual_studio_code:-:*:*:*:*:*:*:*
+MSI Afterburner 4.6.4,4.6.4,cpe:2.3:a:msi:afterburner:-:*:*:*:*:*:*:*
+Signal 5.56.0,5.56.0,cpe:2.3:a:signal:signal-desktop:-:*:*:*:*:*:*:*
+Telegram Desktop version 4.2,4.2,cpe:2.3:a:telegram:telegram_desktop:-:*:*:*:*:*:*:*
+LibreOffice 7.4.1.2,7.4.1.2,cpe:2.3:a:libreoffice:libreoffice:-:*:*:*:*:*:*:*
+VMware Player,16.2.4,cpe:2.3:a:vmware:player:-:*:*:*:*:*:*:*
+Wacom Tablet,6.3.46-2,cpe:2.3:a:wacom:driver:-:*:*:*:*:*:*:*

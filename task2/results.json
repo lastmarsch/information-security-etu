@@ -1,0 +1,18 @@
+{
+    "Steam": [
+        {
+            "CVE_data_meta_ID": "CVE-2015-7985",
+            "cpe": "cpe:2.3:a:valvesoftware:steam_client:2.10.91.91:*:*:*:*:*:*:*",
+            "description": [
+                "Valve Steam 2.10.91.91 uses weak permissions (Users: read and write) for the Install folder, which allows local users to gain privileges via a Trojan horse steam.exe file."
+            ]
+        },
+        {
+            "CVE_data_meta_ID": "CVE-2020-15530",
+            "cpe": "cpe:2.3:a:valvesoftware:steam_client:2.10.91.91:*:*:*:*:*:*:*",
+            "description": [
+                "An issue was discovered in Valve Steam Client 2.10.91.91. The installer allows local users to gain NT AUTHORITY\\SYSTEM privileges because some parts of %PROGRAMFILES(X86)%\\Steam and/or %COMMONPROGRAMFILES(X86)%\\Steam have weak permissions during a critical time window. An attacker can make this time window arbitrarily long by using opportunistic locks."
+            ]
+        }
+    ]
+}
