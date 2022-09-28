@@ -25,8 +25,7 @@ def add_to_map(output_json, software, value):
 
 def extract_data(cve_data, output_json):
     for cve_item in cve_data['CVE_Items']:   
-        CVE_data_meta_ID = cve_item['cve']['CVE_data_meta']['ID']
-        print(CVE_data_meta_ID)     
+        CVE_data_meta_ID = cve_item['cve']['CVE_data_meta']['ID']  
         description = list(map(
             lambda x: x['value'], 
             cve_item['cve']['description']['description_data']
@@ -35,12 +34,25 @@ def extract_data(cve_data, output_json):
         for node in cve_item['configurations']['nodes']:
             for cpe_match in node['cpe_match']:
                 cpe_uri = cpe_match['cpe23Uri']
+                version_start_excluding = cpe_match.get('versionStartExcluding')
+                version_start_including = cpe_match.get('versionStartIncluding')
+                version_end_excluding = cpe_match.get('versionEndExcluding')
+                version_end_including = cpe_match.get('versionEndIncluding')
+                
                 for software_CPE in cpe_software_list:
                     software = software_CPE.__dict__()
-                    if software['cpe_name'] == cpe_uri:
+                    
+                    is_version_after_start = software_CPE.cpe.compare_with_version(version_start_including, '>=') or software_CPE.cpe.compare_with_version(version_start_excluding, '>')
+                    is_version_before_end = software_CPE.cpe.compare_with_version(version_end_including, '<=') or software_CPE.cpe.compare_with_version(version_end_excluding, '<')
+                    
+                    if software['cpe_name'] == cpe_uri or is_version_after_start or is_version_before_end:                        
                         add_to_map(output_json, software, {
                             'CVE_data_meta_ID': CVE_data_meta_ID,
                             'cpe': software['cpe_name'],
+                            'versionStartExcluding': version_start_excluding,
+                            'versionStartIncluding': version_start_including,
+                            'versionEndExcluding': version_end_excluding,
+                            'versionEndIncluding': version_end_including,
                             'description': description
                         })
 

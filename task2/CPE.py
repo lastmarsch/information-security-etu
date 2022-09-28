@@ -1,6 +1,7 @@
 """
 CPE name class
 """
+from packaging import version
 
 
 class CPE:
@@ -46,13 +47,13 @@ class CPE:
             self.vendor = cpe_components[3]
             self.product = cpe_components[4]
             self.version = cpe_components[5]
-            self.update = cpe_components[6] 
-            self.edition = cpe_components[7] 
-            self.language = cpe_components[8] 
-            self.sw_edition = cpe_components[9] 
-            self.target_sw = cpe_components[10] 
-            self.target_hw = cpe_components[11] 
-            self.other = cpe_components[12] 
+            self.update = cpe_components[6]
+            self.edition = cpe_components[7]
+            self.language = cpe_components[8]
+            self.sw_edition = cpe_components[9]
+            self.target_sw = cpe_components[10]
+            self.target_hw = cpe_components[11]
+            self.other = cpe_components[12]
         except IndexError:
             pass
 
@@ -60,15 +61,29 @@ class CPE:
         return ":".join([
             self.cpe,
             self.cpe_version,
-            self.part, 
-            self.vendor, 
-            self.product, 
-            self.version, 
-            self.update, 
-            self.edition, 
-            self.language, 
-            self.sw_edition, 
-            self.target_sw, 
-            self.target_hw, 
+            self.part,
+            self.vendor,
+            self.product,
+            self.version,
+            self.update,
+            self.edition,
+            self.language,
+            self.sw_edition,
+            self.target_sw,
+            self.target_hw,
             self.other
             ])
+
+    def compare_with_version(self, v, operation):
+        if v is None or not isinstance(v, str):
+            return None
+        this_version = version.parse(self.version)
+        other_version = version.parse(v)
+        if operation == '>':
+             return this_version > other_version
+        if operation ==  '>=':
+               return this_version >= other_version
+        if operation ==  '<':
+            return this_version < other_version
+        if operation ==  '<=':
+            return this_version <= other_version
