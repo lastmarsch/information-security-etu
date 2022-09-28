@@ -9,9 +9,9 @@ iTunes,12.12.4.1,cpe:2.3:a:apple:itunes-:-:windows:*:*:*:*:*
 Google Chrome,105.0.5195.127,cpe:2.3:a:google:chrome:-:*:*:*:*:*:*:*
 Microsoft Edge,105.0.1343.42,cpe:2.3:a:microsoft:edge:-:*:*:*:*:*:*:*
 Microsoft Visual Studio Code (User),1.71.2,cpe:2.3:a:microsoft:visual_studio_code:-:*:*:*:*:*:*:*
-MSI Afterburner 4.6.4,4.6.4,cpe:2.3:a:msi:afterburner:-:*:*:*:*:*:*:*
-Signal 5.56.0,5.56.0,cpe:2.3:a:signal:signal-desktop:-:*:*:*:*:*:*:*
-Telegram Desktop version 4.2,4.2,cpe:2.3:a:telegram:telegram_desktop:-:*:*:*:*:*:*:*
-LibreOffice 7.4.1.2,7.4.1.2,cpe:2.3:a:libreoffice:libreoffice:-:*:*:*:*:*:*:*
+MSI Afterburner,4.6.4,cpe:2.3:a:msi:afterburner:-:*:*:*:*:*:*:*
+Signal,5.56.0,cpe:2.3:a:signal:signal-desktop:-:*:*:*:*:*:*:*
+Telegram Desktop version,4.2,cpe:2.3:a:telegram:telegram_desktop:-:*:*:*:*:*:*:*
+LibreOffice,7.4.1.2,cpe:2.3:a:libreoffice:libreoffice:-:*:*:*:*:*:*:*
 VMware Player,16.2.4,cpe:2.3:a:vmware:player:-:*:*:*:*:*:*:*
 Wacom Tablet,6.3.46-2,cpe:2.3:a:wacom:driver:-:*:*:*:*:*:*:*
