@@ -2,7 +2,8 @@
     "Bonjour": [
         {
             "CVE_data_meta_ID": "CVE-2011-0220",
-            "cpe": "cpe:2.3:a:apple:bonjour:3.1.0.1:-:windows:*:*:*:*:*",
+            "cpe_software": "cpe:2.3:a:apple:bonjour:3.1.0.1:-:windows:*:*:*:*:*",
+            "cpe_match": "cpe:2.3:a:apple:bonjour:*:*:*:*:*:*:*:*",
             "versionStartExcluding": null,
             "versionStartIncluding": null,
             "versionEndExcluding": "2011",
@@ -15,7 +16,8 @@
     "Steam": [
         {
             "CVE_data_meta_ID": "CVE-2015-7985",
-            "cpe": "cpe:2.3:a:valvesoftware:steam_client:2.10.91.91:*:*:*:*:*:*:*",
+            "cpe_software": "cpe:2.3:a:valvesoftware:steam_client:2.10.91.91:*:*:*:*:*:*:*",
+            "cpe_match": "cpe:2.3:a:valvesoftware:steam_client:2.10.91.91:*:*:*:*:*:*:*",
             "versionStartExcluding": null,
             "versionStartIncluding": null,
             "versionEndExcluding": null,
@@ -26,7 +28,8 @@
         },
         {
             "CVE_data_meta_ID": "CVE-2020-15530",
-            "cpe": "cpe:2.3:a:valvesoftware:steam_client:2.10.91.91:*:*:*:*:*:*:*",
+            "cpe_software": "cpe:2.3:a:valvesoftware:steam_client:2.10.91.91:*:*:*:*:*:*:*",
+            "cpe_match": "cpe:2.3:a:valvesoftware:steam_client:2.10.91.91:*:*:*:*:*:*:*",
             "versionStartExcluding": null,
             "versionStartIncluding": null,
             "versionEndExcluding": null,
@@ -39,7 +42,8 @@
     "Microsoft Visual Studio Code (User)": [
         {
             "CVE_data_meta_ID": "CVE-2020-1171",
-            "cpe": "cpe:2.3:a:microsoft:visual_studio_code:1.71.2:*:*:*:*:*:*:*",
+            "cpe_software": "cpe:2.3:a:microsoft:visual_studio_code:1.71.2:*:*:*:*:*:*:*",
+            "cpe_match": "cpe:2.3:a:microsoft:visual_studio_code:*:*:*:*:*:python:*:*",
             "versionStartExcluding": null,
             "versionStartIncluding": null,
             "versionEndExcluding": "2020.5.0",
@@ -50,7 +54,8 @@
         },
         {
             "CVE_data_meta_ID": "CVE-2020-1192",
-            "cpe": "cpe:2.3:a:microsoft:visual_studio_code:1.71.2:*:*:*:*:*:*:*",
+            "cpe_software": "cpe:2.3:a:microsoft:visual_studio_code:1.71.2:*:*:*:*:*:*:*",
+            "cpe_match": "cpe:2.3:a:microsoft:visual_studio_code:*:*:*:*:*:python:*:*",
             "versionStartExcluding": null,
             "versionStartIncluding": null,
             "versionEndExcluding": "2020.5.0",
@@ -61,7 +66,8 @@
         },
         {
             "CVE_data_meta_ID": "CVE-2021-28967",
-            "cpe": "cpe:2.3:a:microsoft:visual_studio_code:1.71.2:*:*:*:*:*:*:*",
+            "cpe_software": "cpe:2.3:a:microsoft:visual_studio_code:1.71.2:*:*:*:*:*:*:*",
+            "cpe_match": "cpe:2.3:a:microsoft:visual_studio_code:*:*:*:*:*:matlab:*:*",
             "versionStartExcluding": null,
             "versionStartIncluding": null,
             "versionEndExcluding": "2.0.1",

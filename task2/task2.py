@@ -74,7 +74,8 @@ def extract_data(cve_data, output_json):
                         
                         add_to_map(output_json, software.__dict__()['software_name'], {
                             'CVE_data_meta_ID': CVE_data_meta_ID,
-                            'cpe': software_cpe_object.assemble_cpe(),
+                            'cpe_software': software_cpe_object.assemble_cpe(),
+                            'cpe_match': cpe_object.assemble_cpe(),
                             'versionStartExcluding': version_start_excluding,
                             'versionStartIncluding': version_start_including,
                             'versionEndExcluding': version_end_excluding,
