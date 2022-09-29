@@ -1,0 +1,42 @@
+{
+    "Steam": [
+        {
+            "CVE_data_meta_ID": "CVE-2015-7985",
+            "cpe_software": "cpe:2.3:a:valvesoftware:steam_client:2.10.91.91:*:*:*:*:*:*:*",
+            "cpe_match": "cpe:2.3:a:valvesoftware:steam_client:2.10.91.91:*:*:*:*:*:*:*",
+            "versionStartExcluding": null,
+            "versionStartIncluding": null,
+            "versionEndExcluding": null,
+            "versionEndIncluding": null,
+            "description": [
+                "Valve Steam 2.10.91.91 uses weak permissions (Users: read and write) for the Install folder, which allows local users to gain privileges via a Trojan horse steam.exe file."
+            ]
+        },
+        {
+            "CVE_data_meta_ID": "CVE-2020-15530",
+            "cpe_software": "cpe:2.3:a:valvesoftware:steam_client:2.10.91.91:*:*:*:*:*:*:*",
+            "cpe_match": "cpe:2.3:a:valvesoftware:steam_client:2.10.91.91:*:*:*:*:*:*:*",
+            "versionStartExcluding": null,
+            "versionStartIncluding": null,
+            "versionEndExcluding": null,
+            "versionEndIncluding": null,
+            "description": [
+                "An issue was discovered in Valve Steam Client 2.10.91.91. The installer allows local users to gain NT AUTHORITY\\SYSTEM privileges because some parts of %PROGRAMFILES(X86)%\\Steam and/or %COMMONPROGRAMFILES(X86)%\\Steam have weak permissions during a critical time window. An attacker can make this time window arbitrarily long by using opportunistic locks."
+            ]
+        }
+    ],
+    "Microsoft Visual Studio Code (User)": [
+        {
+            "CVE_data_meta_ID": "CVE-2021-28967",
+            "cpe_software": "cpe:2.3:a:microsoft:visual_studio_code:1.71.2:*:*:*:*:*:*:*",
+            "cpe_match": "cpe:2.3:a:microsoft:visual_studio_code:*:*:*:*:*:matlab:*:*",
+            "versionStartExcluding": null,
+            "versionStartIncluding": null,
+            "versionEndExcluding": "2.0.1",
+            "versionEndIncluding": null,
+            "description": [
+                "The unofficial MATLAB extension before 2.0.1 for Visual Studio Code allows attackers to execute arbitrary code via a crafted workspace because of lint configuration settings."
+            ]
+        }
+    ]
+}
