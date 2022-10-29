@@ -56,31 +56,31 @@ for weakness in weaknesses:
                     )
 
                 # extract potential mitigations
-                mitigations = weaknessContent.selects(
-                    "Potential_Mitigations>Mitigation"
-                )
-                data[dataId]["Mitigations"] = []
-                for mitigation in mitigations:
-                    mitigationContent = SimplifiedDoc(mitigation.get("html"))
-                    phase = mitigationContent.selects("Phase>text()")
-                    strategy = mitigationContent.selects("Strategy>text()")
-                    description = mitigationContent.selects(
-                        "Description>text()")
-                    effectiveness = mitigationContent.selects(
-                        "Effectiveness>text()")
-                    effectiveness_notes = mitigationContent.selects(
-                        "Effectiveness_Notes>text()"
-                    )
-                    data[dataId]["Mitigations"].append(
-                        {
-                            "ID": mitigation.get("Mitigation_ID"),
-                            "Phase": phase,
-                            "Strategy": strategy,
-                            "Description": description,
-                            "Effectiveness": effectiveness,
-                            "Effectiveness notes": effectiveness_notes,
-                        }
-                    )
+                # mitigations = weaknessContent.selects(
+                #     "Potential_Mitigations>Mitigation"
+                # )
+                # data[dataId]["Mitigations"] = []
+                # for mitigation in mitigations:
+                #     mitigationContent = SimplifiedDoc(mitigation.get("html"))
+                #     phase = mitigationContent.selects("Phase>text()")
+                #     strategy = mitigationContent.selects("Strategy>text()")
+                #     description = mitigationContent.selects(
+                #         "Description>text()")
+                #     effectiveness = mitigationContent.selects(
+                #         "Effectiveness>text()")
+                #     effectiveness_notes = mitigationContent.selects(
+                #         "Effectiveness_Notes>text()"
+                #     )
+                #     data[dataId]["Mitigations"].append(
+                #         {
+                #             "ID": mitigation.get("Mitigation_ID"),
+                #             "Phase": phase,
+                #             "Strategy": strategy,
+                #             "Description": description,
+                #             "Effectiveness": effectiveness,
+                #             "Effectiveness notes": effectiveness_notes,
+                #         }
+                #     )
 
                 # extract applicable platforms
                 applicable_platforms = weaknessContent.selects(
@@ -131,54 +131,54 @@ for weakness in weaknesses:
 
                 # extract metrics
                 data[dataId]["Metrics"] = {}
-                data[dataId]["Metrics"]["Technical_Impact"] = weaknessContent.select(
-                    "Technical_Impact>text()"
-                )
-                data[dataId]["Metrics"]["Acquired_Privilege"] = weaknessContent.select(
-                    "Acquired_Privilege>text()"
-                )
-                data[dataId]["Metrics"][
-                    "Acquired_Privilege_Layer"
-                ] = weaknessContent.select("Acquired_Privilege_Layer>text()")
-                data[dataId]["Metrics"][
-                    "Internal_Control_Effectiveness"
-                ] = weaknessContent.select("Internal_Control_Effectiveness>text()")
-                data[dataId]["Metrics"]["Finding_Confidence"] = weaknessContent.select(
-                    "Finding_Confidence>text()"
-                )
-                data[dataId]["Metrics"]["Required_Privilege "] = weaknessContent.select(
-                    "Required_Privilege>text()"
-                )
-                data[dataId]["Metrics"][
-                    "Required_Privilege_Layer"
-                ] = weaknessContent.select("Required_Privilege_Layer>text()")
-                data[dataId]["Metrics"]["Access_Vector"] = weaknessContent.select(
-                    "Access_Vector>text()"
-                )
-                data[dataId]["Metrics"][
-                    "Authentication_Strength"
-                ] = weaknessContent.select("Authentication_Strength>text()")
-                data[dataId]["Metrics"][
-                    "Level_Of_Interaction"
-                ] = weaknessContent.select("Level_Of_Interaction>text()")
-                data[dataId]["Metrics"]["Deployment_Scope"] = weaknessContent.select(
-                    "Deployment_Scope>text()"
-                )
-                data[dataId]["Metrics"]["Business_Impact"] = weaknessContent.select(
-                    "Business_Impact>text()"
-                )
-                data[dataId]["Metrics"][
-                    "Likelihood_Of_Discovery"
-                ] = weaknessContent.select("Likelihood_Of_Discovery>text()")
+                # data[dataId]["Metrics"]["Technical_Impact"] = weaknessContent.select(
+                #     "Technical_Impact>text()"
+                # )
+                # data[dataId]["Metrics"]["Acquired_Privilege"] = weaknessContent.select(
+                #     "Acquired_Privilege>text()"
+                # )
+                # data[dataId]["Metrics"][
+                #     "Acquired_Privilege_Layer"
+                # ] = weaknessContent.select("Acquired_Privilege_Layer>text()")
+                # data[dataId]["Metrics"][
+                #     "Internal_Control_Effectiveness"
+                # ] = weaknessContent.select("Internal_Control_Effectiveness>text()")
+                # data[dataId]["Metrics"]["Finding_Confidence"] = weaknessContent.select(
+                #     "Finding_Confidence>text()"
+                # )
+                # data[dataId]["Metrics"]["Required_Privilege "] = weaknessContent.select(
+                #     "Required_Privilege>text()"
+                # )
+                # data[dataId]["Metrics"][
+                #     "Required_Privilege_Layer"
+                # ] = weaknessContent.select("Required_Privilege_Layer>text()")
+                # data[dataId]["Metrics"]["Access_Vector"] = weaknessContent.select(
+                #     "Access_Vector>text()"
+                # )
+                # data[dataId]["Metrics"][
+                #     "Authentication_Strength"
+                # ] = weaknessContent.select("Authentication_Strength>text()")
+                # data[dataId]["Metrics"][
+                #     "Level_Of_Interaction"
+                # ] = weaknessContent.select("Level_Of_Interaction>text()")
+                # data[dataId]["Metrics"]["Deployment_Scope"] = weaknessContent.select(
+                #     "Deployment_Scope>text()"
+                # )
+                # data[dataId]["Metrics"]["Business_Impact"] = weaknessContent.select(
+                #     "Business_Impact>text()"
+                # )
+                # data[dataId]["Metrics"][
+                #     "Likelihood_Of_Discovery"
+                # ] = weaknessContent.select("Likelihood_Of_Discovery>text()")
                 data[dataId]["Metrics"][
                     "Likelihood_Of_Exploit"
                 ] = weaknessContent.select("Likelihood_Of_Exploit>text()")
-                data[dataId]["Metrics"][
-                    "External_Control_Effectiveness"
-                ] = weaknessContent.select("External_Control_Effectiveness>text()")
-                data[dataId]["Metrics"]["Prevalence"] = weaknessContent.select(
-                    "Prevalence>text()"
-                )
+                # data[dataId]["Metrics"][
+                #     "External_Control_Effectiveness"
+                # ] = weaknessContent.select("External_Control_Effectiveness>text()")
+                # data[dataId]["Metrics"]["Prevalence"] = weaknessContent.select(
+                #     "Prevalence>text()"
+                # )
         except:
             pass
 

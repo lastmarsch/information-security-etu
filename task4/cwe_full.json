@@ -18,35 +18,6 @@
 				"Note": []
 			}
 		],
-		"Mitigations": [
-			{
-				"ID": "MIT-1",
-				"Phase": [
-					"Architecture and Design",
-					"Operation"
-				],
-				"Strategy": [],
-				"Description": [
-					"The architecture needs to access and modification attributes for files to only those users who actually require those actions."
-				],
-				"Effectiveness": [],
-				"Effectiveness notes": []
-			},
-			{
-				"ID": "MIT-46",
-				"Phase": [
-					"Architecture and Design"
-				],
-				"Strategy": [
-					"Separation of Privilege"
-				],
-				"Description": [
-					"Compartmentalize the system to have \"safe\" areas where trust boundaries can be unambiguously drawn. Do not allow sensitive data to go outside of the trust boundary and always be careful when interfacing with a compartment outside of the safe area. Ensure that appropriate compartmentalization is built into the system design, and the compartmentalization allows for and reinforces privilege separation functionality. Architects and designers should rely on the principle of least privilege to decide the appropriate time to use privileges and the time to drop privileges."
-				],
-				"Effectiveness": [],
-				"Effectiveness notes": []
-			}
-		],
 		"Applicable platforms": {
 			"Language": [
 				{
@@ -80,22 +51,7 @@
 			]
 		},
 		"Metrics": {
-			"Technical_Impact": null,
-			"Acquired_Privilege": null,
-			"Acquired_Privilege_Layer": null,
-			"Internal_Control_Effectiveness": null,
-			"Finding_Confidence": null,
-			"Required_Privilege ": null,
-			"Required_Privilege_Layer": null,
-			"Access_Vector": null,
-			"Authentication_Strength": null,
-			"Level_Of_Interaction": null,
-			"Deployment_Scope": null,
-			"Business_Impact": null,
-			"Likelihood_Of_Discovery": null,
-			"Likelihood_Of_Exploit": "Medium",
-			"External_Control_Effectiveness": null,
-			"Prevalence": null
+			"Likelihood_Of_Exploit": "Medium"
 		}
 	},
 	"CVE-2020-15530_CWE-362": {
@@ -148,131 +104,6 @@
 				]
 			}
 		],
-		"Mitigations": [
-			{
-				"ID": null,
-				"Phase": [
-					"Architecture and Design"
-				],
-				"Strategy": [],
-				"Description": [
-					"In languages that support it, use synchronization primitives. Only wrap these around critical code to minimize the impact on performance."
-				],
-				"Effectiveness": [],
-				"Effectiveness notes": []
-			},
-			{
-				"ID": null,
-				"Phase": [
-					"Architecture and Design"
-				],
-				"Strategy": [],
-				"Description": [
-					"Use thread-safe capabilities such as the data access abstraction in Spring."
-				],
-				"Effectiveness": [],
-				"Effectiveness notes": []
-			},
-			{
-				"ID": null,
-				"Phase": [
-					"Architecture and Design"
-				],
-				"Strategy": [],
-				"Description": [
-					"Minimize the usage of shared resources in order to remove as much complexity as possible from the control flow and to reduce the likelihood of unexpected conditions occurring. Additionally, this will minimize the amount of synchronization necessary and may even help to reduce the likelihood of a denial of service where an attacker may be able to repeatedly trigger a critical section (CWE-400)."
-				],
-				"Effectiveness": [],
-				"Effectiveness notes": []
-			},
-			{
-				"ID": null,
-				"Phase": [
-					"Implementation"
-				],
-				"Strategy": [],
-				"Description": [
-					"When using multithreading and operating on shared variables, only use thread-safe functions."
-				],
-				"Effectiveness": [],
-				"Effectiveness notes": []
-			},
-			{
-				"ID": null,
-				"Phase": [
-					"Implementation"
-				],
-				"Strategy": [],
-				"Description": [
-					"Use atomic operations on shared variables. Be wary of innocent-looking constructs such as \"x++\". This may appear atomic at the code layer, but it is actually non-atomic at the instruction layer, since it involves a read, followed by a computation, followed by a write."
-				],
-				"Effectiveness": [],
-				"Effectiveness notes": []
-			},
-			{
-				"ID": null,
-				"Phase": [
-					"Implementation"
-				],
-				"Strategy": [],
-				"Description": [
-					"Use a mutex if available, but be sure to avoid related weaknesses such as CWE-412."
-				],
-				"Effectiveness": [],
-				"Effectiveness notes": []
-			},
-			{
-				"ID": null,
-				"Phase": [
-					"Implementation"
-				],
-				"Strategy": [],
-				"Description": [
-					"Avoid double-checked locking (CWE-609) and other implementation errors that arise when trying to avoid the overhead of synchronization."
-				],
-				"Effectiveness": [],
-				"Effectiveness notes": []
-			},
-			{
-				"ID": null,
-				"Phase": [
-					"Implementation"
-				],
-				"Strategy": [],
-				"Description": [
-					"Disable interrupts or signals over critical parts of the code, but also make sure that the code does not go into a large or infinite loop."
-				],
-				"Effectiveness": [],
-				"Effectiveness notes": []
-			},
-			{
-				"ID": null,
-				"Phase": [
-					"Implementation"
-				],
-				"Strategy": [],
-				"Description": [
-					"Use the volatile type modifier for critical variables to avoid unexpected compiler optimization or reordering. This does not necessarily solve the synchronization problem, but it can help."
-				],
-				"Effectiveness": [],
-				"Effectiveness notes": []
-			},
-			{
-				"ID": "MIT-17",
-				"Phase": [
-					"Architecture and Design",
-					"Operation"
-				],
-				"Strategy": [
-					"Environment Hardening"
-				],
-				"Description": [
-					"Run your code using the lowest privileges that are required to accomplish the necessary tasks [REF-76]. If possible, create isolated accounts with limited privileges that are only used for a single task. That way, a successful attack will not immediately give the attacker access to the rest of the software or its environment. For example, database applications rarely need to run as the database administrator, especially in day-to-day operations."
-				],
-				"Effectiveness": [],
-				"Effectiveness notes": []
-			}
-		],
 		"Applicable platforms": {
 			"Language": [
 				{
@@ -306,22 +137,7 @@
 			]
 		},
 		"Metrics": {
-			"Technical_Impact": null,
-			"Acquired_Privilege": null,
-			"Acquired_Privilege_Layer": null,
-			"Internal_Control_Effectiveness": null,
-			"Finding_Confidence": null,
-			"Required_Privilege ": null,
-			"Required_Privilege_Layer": null,
-			"Access_Vector": null,
-			"Authentication_Strength": null,
-			"Level_Of_Interaction": null,
-			"Deployment_Scope": null,
-			"Business_Impact": null,
-			"Likelihood_Of_Discovery": null,
-			"Likelihood_Of_Exploit": "Medium",
-			"External_Control_Effectiveness": null,
-			"Prevalence": null
+			"Likelihood_Of_Exploit": "Medium"
 		}
 	}
 }
