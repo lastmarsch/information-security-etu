@@ -34,6 +34,7 @@ with open('results_task2.json') as json_file:
                          'base_score': base_score, 
                          'base_severity': base_severity 
                         })
-          
+
+print(scores)          
 max_score = max(scores, key=lambda x:x['base_score'])
 print(f'The risk: {max_score["base_severity"]}')

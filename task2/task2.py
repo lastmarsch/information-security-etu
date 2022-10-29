@@ -71,17 +71,19 @@ def extract_data(cve_data, output_json):
                     is_between_inf_and_end = (is_version_after_start == None) and is_version_before_end
 
                     if is_match_version or is_between_versions or is_between_start_and_inf or is_between_inf_and_end:
-                        
-                        add_to_map(output_json, software.__dict__()['software_name'], {
-                            'CVE_data_meta_ID': CVE_data_meta_ID,
-                            'cpe_software': software_cpe_object.assemble_cpe(),
-                            'cpe_match': cpe_object.assemble_cpe(),
-                            'versionStartExcluding': version_start_excluding,
-                            'versionStartIncluding': version_start_including,
-                            'versionEndExcluding': version_end_excluding,
-                            'versionEndIncluding': version_end_including,
-                            'description': description
-                        })
+                        add_to_map(output_json, software.__dict__()['software_name'], 
+                            cve_item
+                        )
+                        # add_to_map(output_json, software.__dict__()['software_name'], {
+                        #     'CVE_data_meta_ID': CVE_data_meta_ID,
+                        #     'cpe_software': software_cpe_object.assemble_cpe(),
+                        #     'cpe_match': cpe_object.assemble_cpe(),
+                        #     'versionStartExcluding': version_start_excluding,
+                        #     'versionStartIncluding': version_start_including,
+                        #     'versionEndExcluding': version_end_excluding,
+                        #     'versionEndIncluding': version_end_including,
+                        #     'description': description
+                        # })
 
 data = {}
 
@@ -90,5 +92,5 @@ for year in range(2002, 2023):
         cve_data = json.load(json_file)
         extract_data(cve_data, data)        
 
-with open('results.json', 'w') as json_file:
+with open('results_full_cve.json', 'w') as json_file:
     json.dump(data, json_file, ensure_ascii=False, indent=4)
