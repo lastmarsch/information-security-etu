@@ -1,13 +1,14 @@
-import requests
-from stix2 import MemoryStore, Filter
 import json
 import random
+
+import requests
+from stix2 import Filter, MemoryStore
+
 
 # retrieve enterprise data
 def get_data_from_branch(domain, branch="master"):
     stix_json = requests.get(f"https://raw.githubusercontent.com/mitre/cti/{branch}/{domain}/{domain}.json").json()
     return MemoryStore(stix_data=stix_json["objects"])
-
 src = get_data_from_branch("enterprise-attack")
 
 # get tactics
@@ -28,17 +29,18 @@ def get_tactics_by_matrix(src):
         })
 
     return tactics
-
 tactics = get_tactics_by_matrix(src)
 
+# remove deprecated objects
 def remove_revoked_deprecated(stix_objects):
     return list(
         filter(
             lambda x: x.get("x_mitre_deprecated", False) is False and x.get("revoked", False) is False,
             stix_objects
-        )
+        )  # type: ignore
     )
 
+# get tactics and techniques with subtechniques
 def map_techiques_to_tactics(src, tactics = []):    
     mapped = {}
     for tactic in tactics:
@@ -95,8 +97,8 @@ mapped = map_techiques_to_tactics(src, tactics)
 with open('mapped.json', 'w') as f:
     json.dump(mapped, f)
 
-flat_mapped = {}
 # flatten techniques to ease randomizing
+flat_mapped = {}
 for (tactic, techniques) in mapped.items():
     flat_mapped[tactic] = []
     for (technique_id, t) in techniques.items():
@@ -118,7 +120,13 @@ with open('flat_mapped.json', 'w') as f:
     json.dump(flat_mapped, f)
 
 
+# save random generated attack
+random_attack = {}
 for (tactic, techniques) in flat_mapped.items():
     random_techique = random.choice(techniques)
     print(f"Tactic: {tactic}")
     print(f"Id: {random_techique.get('id')}\tName: {random_techique.get('name')}")
+    random_attack[tactic] = random_techique
+    
+with open('random_attack.json', 'w') as f:
+    json.dump(random_attack, f)

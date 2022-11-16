@@ -1,0 +1,72 @@
+{
+	"reconnaissance": {
+		"id": "T1595.002",
+		"name": "Active Scanning: Vulnerability Scanning",
+		"url": "https://attack.mitre.org/techniques/T1595/002"
+	},
+	"resource-development": {
+		"id": "T1583.003",
+		"name": "Acquire Infrastructure: Virtual Private Server",
+		"url": "https://attack.mitre.org/techniques/T1583/003"
+	},
+	"initial-access": {
+		"id": "T1566.001",
+		"name": "Phishing: Spearphishing Attachment",
+		"url": "https://attack.mitre.org/techniques/T1566/001"
+	},
+	"execution": {
+		"id": "T1059.007",
+		"name": "Command and Scripting Interpreter: JavaScript",
+		"url": "https://attack.mitre.org/techniques/T1059/007"
+	},
+	"persistence": {
+		"id": "T1505.004",
+		"name": "Server Software Component: IIS Components",
+		"url": "https://attack.mitre.org/techniques/T1505/004"
+	},
+	"privilege-escalation": {
+		"id": "T1574.013",
+		"name": "Hijack Execution Flow: KernelCallbackTable",
+		"url": "https://attack.mitre.org/techniques/T1574/013"
+	},
+	"defense-evasion": {
+		"id": "T1055.009",
+		"name": "Process Injection: Proc Memory",
+		"url": "https://attack.mitre.org/techniques/T1055/009"
+	},
+	"credential-access": {
+		"id": "T1556.003",
+		"name": "Modify Authentication Process: Pluggable Authentication Modules",
+		"url": "https://attack.mitre.org/techniques/T1556/003"
+	},
+	"discovery": {
+		"id": "T1120",
+		"name": "Peripheral Device Discovery",
+		"url": "https://attack.mitre.org/techniques/T1120"
+	},
+	"lateral-movement": {
+		"id": "T1563.001",
+		"name": "Remote Service Session Hijacking: SSH Hijacking",
+		"url": "https://attack.mitre.org/techniques/T1563/001"
+	},
+	"collection": {
+		"id": "T1005",
+		"name": "Data from Local System",
+		"url": "https://attack.mitre.org/techniques/T1005"
+	},
+	"command-and-control": {
+		"id": "T1102.002",
+		"name": "Web Service: Bidirectional Communication",
+		"url": "https://attack.mitre.org/techniques/T1102/002"
+	},
+	"exfiltration": {
+		"id": "T1011.001",
+		"name": "Exfiltration Over Other Network Medium: Exfiltration Over Bluetooth",
+		"url": "https://attack.mitre.org/techniques/T1011/001"
+	},
+	"impact": {
+		"id": "T1565.003",
+		"name": "Data Manipulation: Runtime Data Manipulation",
+		"url": "https://attack.mitre.org/techniques/T1565/003"
+	}
+}
